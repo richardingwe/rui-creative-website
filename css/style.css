@@ -1,0 +1,2366 @@
+*,
+::before,
+::after {
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #4e4d5a;
+  --nav-color: #4e4d5a;
+  --darker-color: #333336;
+  --white: #ffffff;
+}
+
+body {
+  font-family: Roboto;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.navResponsive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 900ms;
+  transition: -webkit-transform 900ms;
+  transition: transform 900ms;
+  transition: transform 900ms, -webkit-transform 900ms;
+}
+
+.navResponsive .navLinks ul {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70vw;
+  height: 30vh;
+}
+
+.navResponsive .navLinks ul li {
+  list-style: none;
+}
+
+.navResponsive .navLinks ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--nav-color);
+  position: relative;
+}
+
+.navResponsive .navLinks ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-bottom: 2px solid var(--darker-color);
+}
+
+.navResponsive .navLinks ul li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-bottom: 2px solid var(--darker-color);
+}
+
+.navResponsive .socials {
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navResponsive .socials i {
+  color: var(--nav-color);
+  font-size: 24px;
+}
+
+.navResponsive .socials i:hover {
+  color: #3979f3;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.show {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
+  background: linear-gradient(#2481eb, #8050d5);
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+
+header nav {
+  background-color: #fff;
+  padding: 0.7rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 0px 2px rgba(61, 61, 61, 0.2));
+          filter: drop-shadow(0px 0px 2px rgba(61, 61, 61, 0.2));
+}
+
+header nav .navElements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5.5rem;
+  margin: 0 auto;
+}
+
+header nav .navElements .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .navElements .navLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 28vw;
+}
+
+header nav .navElements .navLinks ul li {
+  list-style: none;
+}
+
+header nav .navElements .navLinks ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--nav-color);
+  position: relative;
+}
+
+header nav .navElements .navLinks ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-bottom: 2px solid var(--darker-color);
+}
+
+header nav .navElements .navLinks ul li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-bottom: 2px solid var(--darker-color);
+}
+
+header nav .navElements .socials {
+  width: 15.4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .navElements .socials i {
+  color: var(--nav-color);
+}
+
+header nav .navElements .socials i:hover {
+  color: #3979f3;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+header nav .navElements .menu {
+  height: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+header nav .navElements .menu .stroke {
+  width: 2.5rem;
+  height: 1px;
+  border: 2px solid var(--nav-color);
+}
+
+header nav .navElements .menu .stroke2 {
+  width: 1.5rem;
+}
+
+header .heading {
+  width: 41.3125rem;
+  color: #fff;
+  margin-left: 93px;
+  margin-top: 7.6875rem;
+}
+
+header .heading h4 {
+  margin-bottom: 20px;
+}
+
+header .heading h1 {
+  line-height: 3.125rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+header .heading .letsTalk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .heading .letsTalk p {
+  font-size: 1.5rem;
+  background-color: var(--darker-color);
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-align: center;
+  position: relative;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+header .heading .letsTalk p::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f061";
+  position: absolute;
+  right: -71px;
+  top: -3px;
+  width: 110px;
+  font-size: 42px;
+  color: var(--darker-color);
+}
+
+header .heading .letsTalk .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10rem;
+  margin-left: 3rem;
+  background-color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 35px;
+  border-radius: 30px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+header .heading .letsTalk .contact a {
+  text-decoration: none;
+  color: var(--darker-color);
+}
+
+header .heading .letsTalk .contact i:hover {
+  color: #8050d5;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+header .svg {
+  position: absolute;
+  bottom: -10px;
+  right: -6.1rem;
+}
+
+header .svg img {
+  width: 85%;
+}
+
+header .arrow {
+  position: absolute;
+  right: 2rem;
+  bottom: 6.5rem;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+}
+
+header .arrow i {
+  color: var(--darker-color);
+  font-size: 2rem;
+  margin-top: 3px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+header .arrow i:hover {
+  color: #a52ccf;
+}
+
+section {
+  scroll-snap-align: center;
+  height: 100vh;
+  width: 100%;
+}
+
+section.services {
+  background-color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7rem 0;
+}
+
+section.services h1 {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--darker-color);
+}
+
+section.services hr.short {
+  width: 70px;
+  border: 2px solid var(--darker-color);
+  margin-top: 20px;
+  color: var(--darker-color);
+}
+
+section.services .iconsPack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3.5rem;
+}
+
+section.services .iconsPack .firstRow,
+section.services .iconsPack .secondRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+section.services .iconsPack .secondRow {
+  margin-top: 1.5rem;
+}
+
+section.services .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 225px;
+}
+
+section.services .icons p {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+section.services .icons .img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.services .icons .img img {
+  z-index: 1;
+  text-align: center;
+}
+
+section.services .icon1 .img {
+  background-color: #54d851;
+}
+
+section.services .icon2 .img {
+  background-color: #a52ccf;
+}
+
+section.services .icon3 .img {
+  background-color: #3b74e5;
+}
+
+section.services .icon4 .img {
+  background-color: #33383e;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2rem;
+}
+
+.buttons .arrowUp,
+.buttons .arrowDown {
+  background-color: var(--darker-color);
+  width: 20px;
+  height: 20px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+}
+
+.buttons .arrowUp i,
+.buttons .arrowDown i {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 3px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.buttons .arrowUp i:hover,
+.buttons .arrowDown i:hover {
+  color: #a52ccf;
+}
+
+.buttons .arrowUp {
+  margin-bottom: 25rem;
+}
+
+.buttons .arrowUp i {
+  margin-top: 0;
+}
+
+.sendMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2rem;
+  background-color: var(--darker-color);
+  padding: 30px 10px;
+  border-radius: 30px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+.sendMessage a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sendMessage i:hover {
+  color: #8050d5;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.sendMessage .second {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+section.works {
+  background-color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+}
+
+section.works h1 {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--darker-color);
+}
+
+section.works hr.short {
+  width: 70px;
+  border: 2px solid var(--darker-color);
+  margin-top: 20px;
+  color: var(--darker-color);
+}
+
+section.works .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+  width: 1000px;
+  height: 369.49px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+section.works .display .img {
+  background-color: #f59642;
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0 10px 10px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works .display .img img {
+  width: initial;
+}
+
+section.works .display .text {
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works .display .text h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 1rem;
+}
+
+section.works .display .text p {
+  font-size: 20px;
+}
+
+section.works .display .text a {
+  text-decoration: none;
+}
+
+section.works .display .text a button {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 5.5rem;
+  padding: 17px 60px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#55e659), color-stop(#f59642), to(#55e659));
+  background-image: linear-gradient(to right, #55e659, #f59642, #55e659);
+  cursor: pointer;
+  position: relative;
+  background-size: 200%;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+section.works .display .text a button:hover {
+  background-position-x: right;
+}
+
+section.works2 {
+  background-color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+}
+
+section.works2 h1 {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--darker-color);
+}
+
+section.works2 hr.short {
+  width: 70px;
+  border: 2px solid var(--darker-color);
+  margin-top: 20px;
+  color: var(--darker-color);
+}
+
+section.works2 .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+  width: 1000px;
+  height: 369.49px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+section.works2 .display .img {
+  background-color: #34393f;
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px 0 0 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works2 .display .img img {
+  width: initial;
+}
+
+section.works2 .display .text {
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works2 .display .text h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 1rem;
+}
+
+section.works2 .display .text p {
+  font-size: 20px;
+}
+
+section.works2 .display .text a {
+  text-decoration: none;
+}
+
+section.works2 .display .text a button {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 5.5rem;
+  padding: 17px 60px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7c4d37), color-stop(#34393f), to(#7c4d37));
+  background-image: linear-gradient(to right, #7c4d37, #34393f, #7c4d37);
+  cursor: pointer;
+  position: relative;
+  background-size: 200%;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+section.works2 .display .text a button:hover {
+  background-position-x: right;
+}
+
+section.works3 {
+  background-color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+}
+
+section.works3 h1 {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--darker-color);
+}
+
+section.works3 hr.short {
+  width: 70px;
+  border: 2px solid var(--darker-color);
+  margin-top: 20px;
+  color: var(--darker-color);
+}
+
+section.works3 .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+  width: 1000px;
+  height: 369.49px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+section.works3 .display .img {
+  background-color: #34393f;
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0 10px 10px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works3 .display .img img {
+  width: initial;
+}
+
+section.works3 .display .text {
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works3 .display .text h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 1rem;
+}
+
+section.works3 .display .text p {
+  font-size: 20px;
+}
+
+section.works3 .display .text a {
+  text-decoration: none;
+}
+
+section.works3 .display .text a button {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 5.5rem;
+  padding: 17px 60px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#aeaeae), color-stop(#31363d), to(#aeaeae));
+  background-image: linear-gradient(to right, #aeaeae, #31363d, #aeaeae);
+  cursor: pointer;
+  position: relative;
+  background-size: 200%;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+section.works3 .display .text a button:hover {
+  background-position-x: right;
+}
+
+section.works4 {
+  background-color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+}
+
+section.works4 h1 {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--darker-color);
+}
+
+section.works4 hr.short {
+  width: 70px;
+  border: 2px solid var(--darker-color);
+  margin-top: 20px;
+  color: var(--darker-color);
+}
+
+section.works4 .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+  width: 1000px;
+  height: 369.49px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
+  background: linear-gradient(#2481eb, #8050d5);
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+section.works4 .display .left,
+section.works4 .display .right {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works4 .display .left img,
+section.works4 .display .right img {
+  width: 90%;
+  height: 90%;
+}
+
+section.works4 .display .logo1,
+section.works4 .display .logo2,
+section.works4 .display .logo3,
+section.works4 .display .logo4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works4 .display .logo2,
+section.works4 .display .logo4 {
+  margin-bottom: 2.9rem;
+}
+
+section.works4 .display .logo1,
+section.works4 .display .logo3 {
+  margin-top: 1.3rem;
+}
+
+section.works4 .display::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px solid #fff;
+}
+
+section.works4 .display::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  border-left: 2px solid #fff;
+}
+
+section.works5 {
+  background-color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+}
+
+section.works5 h1 {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--darker-color);
+}
+
+section.works5 hr.short {
+  width: 70px;
+  border: 2px solid var(--darker-color);
+  margin-top: 20px;
+  color: var(--darker-color);
+}
+
+section.works5 .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+  width: 1000px;
+  height: 369.49px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
+  background: linear-gradient(#2481eb, #8050d5);
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+section.works5 .display .left,
+section.works5 .display .right {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works5 .display .left img,
+section.works5 .display .right img {
+  width: 90%;
+  height: 90%;
+}
+
+section.works5 .display .logo1,
+section.works5 .display .logo2,
+section.works5 .display .logo3,
+section.works5 .display .logo4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.works5 .display .logo2,
+section.works5 .display .logo4 {
+  margin-bottom: 2.9rem;
+}
+
+section.works5 .display .logo3 {
+  margin-top: 3rem;
+}
+
+section.works5 .display .logo1 {
+  margin-top: 4rem;
+}
+
+section.works5 .display::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px solid #fff;
+}
+
+section.works5 .display::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  border-left: 2px solid #fff;
+}
+
+section.contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
+  background: linear-gradient(#2481eb, #8050d5);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.contact h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+section.contact h1 span {
+  font-size: 150%;
+}
+
+section.contact .letsTalk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.contact .letsTalk p {
+  font-size: 1.5rem;
+  background-color: var(--darker-color);
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-align: center;
+  position: relative;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+section.contact .letsTalk p::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f061";
+  position: absolute;
+  right: -71px;
+  top: -3px;
+  width: 110px;
+  font-size: 42px;
+  color: var(--darker-color);
+}
+
+section.contact .letsTalk .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10rem;
+  margin-left: 3rem;
+  background-color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 35px;
+  border-radius: 30px;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+section.contact .letsTalk .contact a {
+  text-decoration: none;
+  color: var(--darker-color);
+}
+
+section.contact .letsTalk .contact i:hover {
+  color: #8050d5;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+section.contact .socials {
+  width: 13.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+section.contact .socials i {
+  color: #fff;
+}
+
+section.contact .socials i:hover {
+  color: var(--darker-color);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+section.contact .arrow {
+  position: absolute;
+  right: 2rem;
+  top: 6.5rem;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+}
+
+section.contact .arrow i {
+  color: var(--darker-color);
+  font-size: 2rem;
+  margin-top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+section.contact .arrow i:hover {
+  color: #a52ccf;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  header nav .navElements {
+    padding: 0 2rem;
+  }
+  header nav .navElements .navLinks ul {
+    display: none;
+  }
+  header nav .navElements .socials {
+    display: none;
+  }
+  header nav .navElements .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .heading {
+    width: 100vw;
+    color: #fff;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 2rem;
+    margin-top: 7rem;
+  }
+  header .heading h4 {
+    margin-bottom: 20px;
+  }
+  header .heading h1 {
+    line-height: 3.125rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  header .heading .letsTalk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .heading .letsTalk p {
+    font-size: 1.5rem;
+    background-color: var(--darker-color);
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-align: center;
+    margin-bottom: 2.7rem;
+    position: relative;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+  }
+  header .heading .letsTalk p::after {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f063";
+    position: absolute;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    top: 30px;
+    width: 110px;
+    font-size: 42px;
+    color: var(--darker-color);
+  }
+  header .heading .letsTalk .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 10rem;
+    margin-left: 0;
+    color: var(--darker-color);
+    background-color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 35px;
+    border-radius: 30px;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+  }
+  header .heading .letsTalk .contact i:hover {
+    color: #8050d5;
+    -webkit-transition: 400ms;
+    transition: 400ms;
+    cursor: pointer;
+  }
+  header .svg {
+    display: none;
+  }
+  header .arrow {
+    position: absolute;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    bottom: 1.2rem;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+  }
+  header .arrow i {
+    color: var(--darker-color);
+    font-size: 2rem;
+    margin-top: 3px;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  header .arrow i:hover {
+    color: #a52ccf;
+  }
+  section.services {
+    background-color: #fcfcfc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 7rem 0;
+  }
+  section.services h1 {
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darker-color);
+  }
+  section.services hr.short {
+    width: 70px;
+    border: 2px solid var(--darker-color);
+    margin-top: 20px;
+    color: var(--darker-color);
+  }
+  section.services .iconsPack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 3.5rem;
+  }
+  section.services .iconsPack .firstRow,
+  section.services .iconsPack .secondRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  section.services .iconsPack .secondRow {
+    margin-top: 1.5rem;
+  }
+  section.services .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 155px;
+  }
+  section.services .icons p {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  section.services .icons .img {
+    width: 68%;
+    height: 105px;
+    border-radius: 50%;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.services .icons .img img {
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+  }
+  section.services .icon1 .img {
+    background-color: #54d851;
+  }
+  section.services .icon2 .img {
+    background-color: #a52ccf;
+  }
+  section.services .icon3 .img {
+    background-color: #3b74e5;
+  }
+  section.services .icon4 .img {
+    background-color: #33383e;
+  }
+  .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 55%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 2rem;
+  }
+  .buttons .arrowUp,
+  .buttons .arrowDown {
+    background-color: var(--darker-color);
+    width: 20px;
+    height: 20px;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+    cursor: pointer;
+  }
+  .buttons .arrowUp i,
+  .buttons .arrowDown i {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 3px;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  .buttons .arrowUp i:hover,
+  .buttons .arrowDown i:hover {
+    color: #a52ccf;
+  }
+  .buttons .arrowUp {
+    margin-bottom: 32rem;
+  }
+  .buttons .arrowUp i {
+    margin-top: 0;
+  }
+  .sendMessage {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 2rem;
+    color: #fff;
+    background-color: var(--darker-color);
+    font-size: 1.2rem;
+    padding: 30px 10px;
+    border-radius: 30px;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+  .sendMessage i:hover {
+    color: #8050d5;
+    -webkit-transition: 400ms;
+    transition: 400ms;
+    cursor: pointer;
+  }
+  .sendMessage .second {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  section.works {
+    background-color: #fcfcfc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+  }
+  section.works h1 {
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darker-color);
+  }
+  section.works hr.short {
+    width: 70px;
+    border: 2px solid var(--darker-color);
+    margin-top: 20px;
+    color: var(--darker-color);
+  }
+  section.works .display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1.5rem;
+    width: 90vw;
+    height: 54vh;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+  section.works .display .img {
+    background-color: #f59642;
+    width: 90vw;
+    height: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works .display .img img {
+    width: 111vw;
+  }
+  section.works .display .text {
+    width: 100%;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works .display .text h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 0.5rem;
+  }
+  section.works .display .text p {
+    font-size: 18px;
+  }
+  section.works .display .text a {
+    text-decoration: none;
+  }
+  section.works .display .text a button {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    margin-top: 0.5rem;
+    padding: 20px 65px;
+    border-radius: 30px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#55e659), color-stop(#f59642), to(#55e659));
+    background-image: linear-gradient(to right, #55e659, #f59642, #55e659);
+    cursor: pointer;
+    position: relative;
+    background-size: 200%;
+    -webkit-transition: 600ms;
+    transition: 600ms;
+  }
+  section.works .display .text a button:hover {
+    background-position-x: right;
+  }
+  section.works2 {
+    background-color: #fcfcfc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+  }
+  section.works2 h1 {
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darker-color);
+  }
+  section.works2 hr.short {
+    width: 70px;
+    border: 2px solid var(--darker-color);
+    margin-top: 20px;
+    color: var(--darker-color);
+  }
+  section.works2 .display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1.5rem;
+    width: 90vw;
+    height: 54vh;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+  section.works2 .display .img {
+    background-color: #34393f;
+    width: 90vw;
+    height: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works2 .display .img img {
+    width: 111vw;
+  }
+  section.works2 .display .text {
+    width: 100%;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works2 .display .text h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 0.5rem;
+  }
+  section.works2 .display .text p {
+    font-size: 18px;
+  }
+  section.works2 .display .text a {
+    text-decoration: none;
+  }
+  section.works2 .display .text a button {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    margin-top: 0.5rem;
+    padding: 20px 65px;
+    border-radius: 30px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#7c4d37), color-stop(#34393f), to(#7c4d37));
+    background-image: linear-gradient(to right, #7c4d37, #34393f, #7c4d37);
+    cursor: pointer;
+    position: relative;
+    background-size: 200%;
+    -webkit-transition: 600ms;
+    transition: 600ms;
+  }
+  section.works2 .display .text a button:hover {
+    background-position-x: right;
+  }
+  section.works3 {
+    background-color: #fcfcfc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+  }
+  section.works3 h1 {
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darker-color);
+  }
+  section.works3 hr.short {
+    width: 70px;
+    border: 2px solid var(--darker-color);
+    margin-top: 20px;
+    color: var(--darker-color);
+  }
+  section.works3 .display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1.5rem;
+    width: 90vw;
+    height: 54vh;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+  section.works3 .display .img {
+    background-color: #34393f;
+    width: 90vw;
+    height: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works3 .display .img img {
+    width: 111vw;
+  }
+  section.works3 .display .text {
+    width: 100%;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works3 .display .text h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 0.5rem;
+  }
+  section.works3 .display .text p {
+    font-size: 18px;
+  }
+  section.works3 .display .text a {
+    text-decoration: none;
+  }
+  section.works3 .display .text a button {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    margin-top: 0.5rem;
+    padding: 20px 65px;
+    border-radius: 30px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#aeaeae), color-stop(#31363d), to(#aeaeae));
+    background-image: linear-gradient(to right, #aeaeae, #31363d, #aeaeae);
+    cursor: pointer;
+    position: relative;
+    background-size: 200%;
+    -webkit-transition: 600ms;
+    transition: 600ms;
+  }
+  section.works3 .display .text a button:hover {
+    background-position-x: right;
+  }
+  section.works4 {
+    background-color: #fcfcfc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+  }
+  section.works4 h1 {
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darker-color);
+  }
+  section.works4 hr.short {
+    width: 70px;
+    border: 2px solid var(--darker-color);
+    margin-top: 20px;
+    color: var(--darker-color);
+  }
+  section.works4 .display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1.5rem;
+    width: 90vw;
+    height: 65%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
+    background: linear-gradient(#2481eb, #8050d5);
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+  section.works4 .display .left,
+  section.works4 .display .right {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works4 .display .left img,
+  section.works4 .display .right img {
+    width: 90%;
+    height: 90%;
+  }
+  section.works4 .display .logo1,
+  section.works4 .display .logo2,
+  section.works4 .display .logo3,
+  section.works4 .display .logo4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works4 .display .logo2,
+  section.works4 .display .logo4 {
+    margin-bottom: 0;
+  }
+  section.works4 .display .logo1,
+  section.works4 .display .logo3 {
+    margin-top: 0;
+  }
+  section.works4 .display::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid #fff;
+    display: none;
+  }
+  section.works4 .display::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border-left: 2px solid #fff;
+    display: none;
+  }
+  section.works5 {
+    background-color: #fcfcfc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+  }
+  section.works5 h1 {
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darker-color);
+  }
+  section.works5 hr.short {
+    width: 70px;
+    border: 2px solid var(--darker-color);
+    margin-top: 20px;
+    color: var(--darker-color);
+  }
+  section.works5 .display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1.5rem;
+    width: 90vw;
+    height: 65%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
+    background: linear-gradient(#2481eb, #8050d5);
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+  section.works5 .display .left,
+  section.works5 .display .right {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works5 .display .left img,
+  section.works5 .display .right img {
+    width: 90%;
+    height: 90%;
+  }
+  section.works5 .display .logo1,
+  section.works5 .display .logo2,
+  section.works5 .display .logo3,
+  section.works5 .display .logo4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.works5 .display .logo2,
+  section.works5 .display .logo4 {
+    margin-bottom: 0;
+  }
+  section.works5 .display .logo1,
+  section.works5 .display .logo3 {
+    margin-top: 0;
+  }
+  section.works5 .display::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid #fff;
+    display: none;
+  }
+  section.works5 .display::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border-left: 2px solid #fff;
+    display: none;
+  }
+}
