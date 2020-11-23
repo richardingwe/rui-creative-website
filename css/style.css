@@ -2682,7 +2682,7 @@ section.contact .arrow i:hover {
     color: #a52ccf;
   }
   .buttons .arrowUp {
-    margin-bottom: 27rem;
+    margin-bottom: 29rem;
   }
   .buttons .arrowUp i {
     margin-top: 0;
@@ -2767,7 +2767,7 @@ section.contact .arrow i:hover {
             align-items: center;
     margin-top: 1.5rem;
     width: 90vw;
-    height: 54vh;
+    height: 60vh;
     background-color: #fff;
     border-radius: 10px;
     -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
@@ -2882,7 +2882,7 @@ section.contact .arrow i:hover {
             align-items: center;
     margin-top: 1.5rem;
     width: 90vw;
-    height: 54vh;
+    height: 60vh;
     background-color: #fff;
     border-radius: 10px;
     -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
@@ -2997,7 +2997,7 @@ section.contact .arrow i:hover {
             align-items: center;
     margin-top: 1.5rem;
     width: 90vw;
-    height: 54vh;
+    height: 60vh;
     background-color: #fff;
     border-radius: 10px;
     -webkit-filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
@@ -3113,7 +3113,7 @@ section.contact .arrow i:hover {
             align-items: center;
     margin-top: 1.5rem;
     width: 90vw;
-    height: 65%;
+    height: 60vh;
     background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
     background: linear-gradient(#2481eb, #8050d5);
     border-radius: 10px;
@@ -3226,7 +3226,7 @@ section.contact .arrow i:hover {
             align-items: center;
     margin-top: 1.5rem;
     width: 90vw;
-    height: 65%;
+    height: 60vh;
     background: -webkit-gradient(linear, left top, left bottom, from(#2481eb), to(#8050d5));
     background: linear-gradient(#2481eb, #8050d5);
     border-radius: 10px;
